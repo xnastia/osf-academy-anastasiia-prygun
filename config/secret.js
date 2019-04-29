@@ -2,6 +2,7 @@ module.exports = {
     database: process.env.DB_URI  || 'mongodb://heroku_1l2nfm1n:rlgm0esk7r9jp8hhei8m61gcsv@ds147746.mlab.com:47746/heroku_1l2nfm1n',
     port: process.env.PORT || 3000,
     secretKey: "dba383002e3e50b44108dd6a6f2a0327",
+    sendgrid_key: "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",
     facebook: {
         clientID: '373862159895119',
         clientSecret: 'dba383002e3e50b44108dd6a6f2a0327',

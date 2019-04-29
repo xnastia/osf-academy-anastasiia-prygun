@@ -1,8 +1,11 @@
 <% layout('layout') -%>
   <div class="main-content">
+      
             <div class="sub-category">
                 <a href="/">Home/</a><a href="/categories/<%= parent_category.id %>/subcategories"><%= parent_category.name %>/</a><a href="/categories/<%= selected_category.id %>/products"> <%= selected_category.name %></a>/<%= product.name %>
+                
                 <div class="product">
+                    
                    <div id="bigCarousel" class="carousel slide carousel-slide" data-ride="carousel">
                         <div class="carousel-inner">
                         <% image_urls = product.large_image_urls() %>
@@ -68,17 +71,25 @@
 
                         <div class="pull-right">
                                 <a href="#" behavior="submit" class="btn btn-success order-btn" role="button">Buy  <span class="glyphicon glyphicon-shopping-cart"></span></a>
+                                
                               </div>
-                            <div class="pull-right marg">
-                                <div class="fb-like" data-href="https://koala-ecommerce.herokuapp.com/products/<%= product.id%>" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-                              </div>
+                            
                         </div>
-                    </form>
-                    <%- partial('wishes/wishlist_button', {product: product}) %>
+                    </form>                    
+                    
                     </div>
+                    <div class="pull-right">
+                      
+                        <%- partial('wishes/wishlist_button', {product: product}) %>
+                      </div>
+                    </br>
+                      <div class="pull-right marg">
+                          <div class="fb-like" data-href="https://koala-ecommerce.herokuapp.com/products/<%= product.id%>" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+                        </div>
                 </div>
                 
             </div>
+            
         </div>
 
 

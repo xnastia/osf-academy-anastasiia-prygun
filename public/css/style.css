@@ -1,0 +1,121 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.view-btn {
+  color: #00B7FF;
+  margin: 20px;
+}
+
+li {
+  list-style-type: none;
+ }
+
+ .main-content{
+  display: flex;
+  justify-content: center;
+ }
+ .main-category{
+   width: 950px;
+   display: flex;
+   justify-content: center;
+ }
+
+ .sub-category{
+   width: 754px;
+ }
+
+ .page-footer{
+   background-color: black !important;
+   color: white !important;
+  padding-top: 12px;
+  padding-bottom: 12px;
+ }
+
+ .product-box{
+width:250px !important;
+height: 390px !important;
+padding-top: 20px;
+padding-bottom: 20px;
+ }
+
+ .pricetext{
+   margin-top:10px;
+ }
+
+ .product{
+
+  display:flex;
+  padding: 20px;
+ }
+
+ .carousel-slide{
+   width:350px;
+ }
+
+ #bigCarousel{
+   height: 350px;
+   margin: 20px;
+ }
+
+ .carousel-control.right{
+   background:none !important;
+ }
+
+ .carousel-control.left{
+  background:none !important;
+}
+
+.carousel-inner{
+  display: flex;
+   justify-content: center;
+}
+
+.order-btn{
+  margin:10px;
+}
+
+#currency{
+  width:60px;
+  margin-left: 20px;
+}
+
+.productprice{
+  display: flex;
+  float: inline-start;
+}
+
+.footer{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  position: relative;
+  min-height: 100%;
+}
+.content {
+  padding-bottom: 90px;
+}
+
+.btn-facebook{
+  width: 140px !important;
+  margin-top: 10px;
+}
+ .marg{
+   margin-top:10px;
+ }
+
+
+

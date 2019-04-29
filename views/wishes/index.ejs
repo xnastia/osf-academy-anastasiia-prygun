@@ -1,0 +1,30 @@
+<% layout('layout') -%>
+
+ <div class="main-content">
+            <div class="sub-category">
+                    <table class="table">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Price</th>
+                                <th scope="col"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            <% wishes.forEach(function(product) { %>
+                              <tr>
+                                <td><img src="/images/<%= product.small_image_url() %>"></td>
+                                <td><%= product.name %></td>
+                                <td><%= product.short_description %></td>
+                                <td><%= product.price %></td>
+                                <td>
+                                        <a href="/products/<%= product.id %>" class="btn btn-success" role="button"><span class="glyphicon glyphicon-shopping-cart"></span></a></td>
+                              </tr>
+                              <% }) %>
+                            </tbody>
+
+                          </table>
+            </div>
+        </div>

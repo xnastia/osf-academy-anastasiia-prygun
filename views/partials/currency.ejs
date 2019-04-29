@@ -1,0 +1,7 @@
+<form action="/currency" method="post">
+  <select id="currency" name="currency" class ="marg" onchange="this.form.submit()">
+      <% Object.keys(global.rates).forEach(function(rate) { %>
+          <option value="<%= rate %>" <% if(selected_currency == rate) { %>selected="selected" <% } %> ><%= rate %></option>
+     <% })%>
+  </select>
+</form>

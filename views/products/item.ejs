@@ -1,0 +1,26 @@
+  <div class="album py-5 bg-light">
+            <div class="col-md-2 column productbox product-box">
+                <div><%= product.name %></div>
+                    <div id="smallCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="/images/<%= product.small_image_url() %>">
+                            </div>
+
+                            <div class="item">
+                                <img src="/images/<%= product.small_image_url() %>">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="producttitle"><%- product.short_description %></div>
+                    <div class="productprice">
+                        </br>
+                        <div class="pricetext">Price: <%= partial('partials/price', {price: product.price}) %></div>
+
+                    </div>
+
+                <div class="pull-right"><a href="/products/<%= product.id %>" class="btn btn-info view-btn" role="button">View
+                        details</a></div>
+                </div>
+        </div>

@@ -1,0 +1,13 @@
+<% layout('layout') -%>
+
+
+<div class="main-content">
+    <div class="sub-category">
+        <% if (parent_category && selected_category) { %>
+        <a href="/">Home/</a><a href="/categories/<%= parent_category.id %>/subcategories"><%= parent_category.name %>/</a><%= selected_category.name %>
+        <% } %>
+        <% for (var i = 0; i < products.length; i++) { %>
+        <%- partial('products/item',{product: products[i]}) %>
+      <% } %>
+  </div>
+</div>

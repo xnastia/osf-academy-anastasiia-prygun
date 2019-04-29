@@ -1,0 +1,37 @@
+<% layout('layout') -%>
+
+    <% items.forEach(function(topC) { %>
+    <div class="main-content">
+    <ul class="main-category">
+    <li>
+        <h1><%= topC.name %></h1>
+        <p><%= topC.page_description %></p>
+        <% if (topC.image) { %>
+          <div><img src="/images/<%= topC.image %>"></div>
+
+        <% } %>
+        <div>
+             <ul class="sub-category">
+                <% topC.categories.forEach(function(subC) { %>
+                <li>
+                    <h2><%= subC.name %></h1>
+                    <hr/ >
+                    <% if (subC.image) { %>
+                    <div>
+                        <img src="/images/<%= subC.image %>">
+                    </div>
+                    <% } %>
+                    <p><%= subC.page_description %></p>
+                     <% if (subC.categories && subC.categories.length > 0) { %>
+                     <a href="/categories/<%= subC.id %>/subcategories" class="btn btn-info view-btn" role="button">View subcategories</a>
+                     <% } else { %>
+                     <a href="/categories/<%= subC.id %>/products" class="btn btn-info view-btn" role="button">View products</a>
+                     <% }  %>
+                </li>
+                <% }); %>
+            </ul>
+        </div>
+    </li>
+    </ul>
+   </div>
+    <% }); %>

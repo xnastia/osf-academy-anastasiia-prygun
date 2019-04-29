@@ -1,0 +1,28 @@
+<% layout('layout') -%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-offset-3">
+            <% if (message.length > 0) { %>
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <span id="error-login"><strong>Error!</strong> <%= message %></span>
+            </div>
+            <% } %>
+            <h3>Set new password</h3>
+            <form action="/reset" method="post" class="well well-sm">
+              <input type="hidden" name="token" value="<%= token %>" />
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input type="password" id="password" class="form-control" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" id="submit" class="btn btn-success" value="Set password">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
